@@ -1,0 +1,92 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  color: var(--color-dark);
+}
+
+:root {
+  --color-primary: #24336B;
+  --color-dark: #333;
+  --color-dark-light: #F0F1F4;
+  --color-dark-medium: rgb(87, 87, 87);
+}
+
+select,
+textarea,
+input {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+
+.notAccount {
+  font-size: 12px;
+  margin: 20px 0;
+}
+
+label {
+  font-weight: bold;
+  float: left;
+  margin-top: 10px;
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  width: 100%;
+  color: var(--color-dark-medium);
+}
+
+input {
+  width: 100%;
+  margin-top: 10px;
+  border-bottom: 1px solid var(--color-dark-light);
+  border-left: 0;
+  border-right: 0;
+  font-family: 'Montserrat', sans-serif;
+  border-top: 0;
+  height: 40px;
+
+  &::placeholder {
+    font-size: 14px;
+  }
+}
+
+.contForm {
+  width: 400px;
+  margin: 0 auto;
+}
+
+
+.contFull {
+  width: 100%;
+  float: left;
+}
+
+.buttonDefault {
+  margin-top: 25px;
+
+  button {
+    color: white;
+    background-color: var(--color-primary);
+    border-radius: 30px;
+    padding: 14px 30px;
+    font-weight: bold;
+    font-size: 13px;
+    border: 0;
+    float: right;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif !important;
+}

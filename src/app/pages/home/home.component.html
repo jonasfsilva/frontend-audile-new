@@ -1,0 +1,359 @@
+<header>
+  <div class="logo"><img src="./assets/images/logo-audile.png" /></div>
+
+  <div class="menu">
+    <ul>
+      <li><a href="#converterAudio">Vozes</a></li>
+      <li><a href="#comoFunciona">Como funciona</a></li>
+      <li><a href="#planos">Preços</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </div>
+  <div class="buttonDefault">
+    <button routerLink="/register">Criar conta</button>
+  </div>
+  <div class="buttonOutline">
+    <button routerLink="/login">Login</button>
+  </div>
+</header>
+<section id="home">
+  <div class="banner">
+    <div class="cont-info-banner">
+      <div class="chamada">
+        <b>Transforme</b> seus<br />
+        textos em <br />
+        <b>áudio</b>
+      </div>
+      <div class="text">
+        A ferramenta ideal para gerar<br />
+        seus <b>audiobooks</b> e material de <b>estudo</b>.
+      </div>
+
+      <div class="card">
+        <img src="./assets/images/icon-audile.png" />
+        Inscreva-se para ter acesso a <br />
+        <b>diversas funcionalidades</b>.
+      </div>
+    </div>
+    <div class="info">
+      Escolha um idioma
+      <div class="idioma">
+        <div class="idiomaOne">English</div>
+        <div class="circulo"></div>
+        <div class="idiomaTwo">Português</div>
+      </div>
+      <div class="cont-text">
+        <textarea id="story" name="story" rows="5" cols="33">
+ O Audile é uma ferramenta online que converte texto em áudio (mp3) de forma rápida e fácil. Obrigado por usar o Soar.
+              </textarea
+        >
+      </div>
+      <div class="buttonLine">
+        <button>Converter texto</button>
+      </div>
+      <div class="cont-play">
+        <ngx-audio-player
+          [playlist]="msaapPlaylist"
+          [displayTitle]="msaapDisplayTitle"
+          [autoPlay]="true"
+          muted="muted"
+          [displayPlaylist]="msaapDisplayPlayList"
+          [displayVolumeControls]="msaapDisplayVolumeControls"
+          [displayRepeatControls]="msaapDisplayRepeatControls"
+          [disablePositionSlider]="msaapDisablePositionSlider"
+          [displayArtist]="msaapDisplayArtist"
+          [displayDuration]="msaapDisplayDuration"
+          [expanded]="false"
+        ></ngx-audio-player>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="converterAudio">
+  <div class="contText">
+    <div class="title">
+      Conheça todas as<br />
+      nossas vozes.
+    </div>
+    <div class="text">
+      São mais de <b>5 idiomas</b> disponíveis<br />
+      com vozes dos gêneros
+      <b
+        >masculino e<br />
+        feminino.</b
+      >
+    </div>
+  </div>
+  <div class="audio">
+    Ouça agora:
+    <select name="select">
+      <option value="valor1">Alemão</option>
+      <option value="valor2" selected>Português</option>
+      <option value="valor3">Inglês</option>
+    </select>
+    <select name="select">
+      <option value="valor1">Masculino</option>
+      <option value="valor2" selected>Feminino</option>
+    </select>
+    <div class="contFull">
+      <div class="cont-play">
+        <ngx-audio-player
+          [playlist]="msaapPlaylist"
+          [displayTitle]="msaapDisplayTitle"
+          [autoPlay]="true"
+          muted="muted"
+          [displayPlaylist]="msaapDisplayPlayList"
+          [displayVolumeControls]="msaapDisplayVolumeControls"
+          [displayRepeatControls]="msaapDisplayRepeatControls"
+          [disablePositionSlider]="msaapDisablePositionSlider"
+          [displayArtist]="msaapDisplayArtist"
+          [displayDuration]="msaapDisplayDuration"
+          [expanded]="false"
+        ></ngx-audio-player>
+      </div>
+    </div>
+    <div class="contFull">
+      Use fones de ouvido para aproveitar toda experiência
+    </div>
+  </div>
+</section>
+
+<section id="comoFunciona">
+  <div class="text">ferramentas e recursos</div>
+  <div class="title">
+    O que você pode fazer <br />
+    com o audile?
+  </div>
+  <div class="contFullSlider">
+    <div class="item">
+      <div class="modelo">Estudo</div>
+      <img src="./assets/images/icon-1.png" />
+      <div class="textSlider">
+        Escute quando não <br />
+        puder ler
+      </div>
+      <div class="descriptionSlider">
+        A gente sabe que nem sempre dá pra ler aquele texto que precisamos para
+        o curso. Converta seus textos em áudio e estude mesmo quando não puder
+        ler.
+      </div>
+    </div>
+    <div class="item">
+      <div class="modelo">Estudo</div>
+      <img src="./assets/images/icon-1.png" />
+      <div class="textSlider">
+        Escute quando não <br />
+        puder ler
+      </div>
+      <div class="descriptionSlider">
+        A gente sabe que nem sempre dá pra ler aquele texto que precisamos para
+        o curso. Converta seus textos em áudio e estude mesmo quando não puder
+        ler.
+      </div>
+    </div>
+    <div class="item">
+      <div class="modelo">Estudo</div>
+      <img src="./assets/images/icon-1.png" />
+      <div class="textSlider">
+        Escute quando não <br />
+        puder ler
+      </div>
+      <div class="descriptionSlider">
+        A gente sabe que nem sempre dá pra ler aquele texto que precisamos para
+        o curso. Converta seus textos em áudio e estude mesmo quando não puder
+        ler.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="planos">
+  <div class="title">Escolha o melhor plano para você</div>
+  <div class="text">
+    Tenha a sua disposição, um serviço de texto para áudio fácil de usar e
+    com<br />
+    as melhores vozes do mercado!
+  </div>
+  <div class="contPlanosAdmin">
+    <div class="pricing">
+      <div class="plan">
+        <h2>Plano</h2>
+        <div class="price">FREE</div>
+        <ul class="features">
+          <li>3 Páginas por dia</li>
+          <li>Baixe áudio em mp3</li>
+          <li>Áudio de até 1 página</li>
+          <li>2 Vozes</li>
+        </ul>
+      </div>
+      <div class="plan popular">
+        <span>Plano Recomendado</span>
+        <h2>Pro</h2>
+        <div class="price">R$ 19,00</div>
+        <ul class="features">
+          <li>3 Páginas por dia</li>
+          <li>Baixe áudio em mp3</li>
+          <li>Áudio de até 1 página</li>
+          <li>2 Vozes</li>
+        </ul>
+        <button>Comprar</button>
+      </div>
+      <div class="plan">
+        <h2>Plano</h2>
+        <div class="price">Anual</div>
+        <div class="price">R$ 89,00</div>
+        <ul class="features">
+          <li>3 Páginas por dia</li>
+          <li>Baixe áudio em mp3</li>
+          <li>Áudio de até 1 página</li>
+          <li>2 Vozes</li>
+        </ul>
+        <button>Comprar</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="title">FAQ - Perguntas frequentes</div>
+  <div class="text">
+    Tenha a sua disposição, um serviço de texto para áudio fácil de usar e
+    com<br />
+    as melhores vozes do mercado!
+  </div>
+  <div class="faq">
+    <input id="faq-a" type="checkbox" />
+    <label for="faq-a">
+      <p class="faq-heading">Como criar uma conta no Audile?</p>
+      <div class="faq-arrow"></div>
+      <p class="faq-text">
+        Para criar uma conta no Audile, basta você efetuar um cadastro em:
+        <b>Criar conta.</b>
+        Ao entrar neste link, você preencherá os dados necessários solicitados,
+        tais como nome, sobrenome e e-mail e, ao confirmar os dados, você
+        receberá em sua Caixa de Entrada um e-mail de ativação da conta. É
+        necessário você fazer essa ativação para que o Soar possa concluir a
+        validação do seu e-mail, pois será através dele que estabeleceremos
+        nossa comunicação.
+      </p>
+    </label>
+    <input id="faq-b" type="checkbox" />
+    <label for="faq-b">
+      <p class="faq-heading">
+        Posso usar o serviço do Soar antes de criar uma conta?
+      </p>
+      <div class="faq-arrow"></div>
+      <p class="faq-text">
+        Não. Para usar a nossa plataforma, é necessário se cadastrar e ativar a
+        sua conta no Soar, conforme informamos na pergunta 1.
+      </p>
+    </label>
+    <input id="faq-c" type="checkbox" />
+    <label for="faq-c">
+      <p class="faq-heading">
+        Esqueci a minha senha do login. Como consigo recuperar?
+      </p>
+      <div class="faq-arrow"></div>
+      <p class="faq-text">
+        Simples. Se você esqueceu a sua senha, basta acessar a página de login
+        do Soar em Soar | Entrar. Abaixo dos campos de preenchimento de e-mail e
+        senha, você verá a mensagem: "Esqueceu sua senha? Não se preocupe,
+        clique aqui para resetar sua senha". Neste link você poderá resetar sua
+        senha e receberá em seu e-mail um novo link de acesso à sua conta para
+        criar a nova senha. Se você enfrentar dificuldades com o processo ou não
+        receber esse link no e-mail, você pode entrar em contato com o Suporte
+        ao Usuário do Soar, através do link: Soar | Contato ou diretamente pelo
+        e-mail contact@soarmp3.com, relatando com detalhes o problema. A nossa
+        equipe vai ajudar você a resolver a questão.
+      </p>
+    </label>
+    <input id="faq-d" type="checkbox" />
+    <label for="faq-d">
+      <p class="faq-heading">
+        Não recebi o e-mail de ativação. Como devo proceder?
+      </p>
+      <div class="faq-arrow"></div>
+      <p class="faq-text">
+        Se você efetuou todo o cadastro certinho em Soar | Registrar e não
+        recebeu em sua Caixa de Entrada o e-mail de ativação do Soar, não se
+        preocupe! Primeiramente é sempre bom checar se esse e-mail chegou em
+        alguma outra Caixa do seu e-mail, como a Caixa de Spam, por exemplo. É
+        raro, mas pode acontecer. Mas se já demorou muito tempo e você não
+        recebeu o e-mail, você pode entrar em contato com o Suporte ao Usuário
+        do Soar, através do link: Soar | Contato ou diretamente pelo e-mail
+        contact@soarmp3.com . A nossa equipe de atendimento fará o re-envio
+        desse e-mail de ativação ou se comunicará diretamente com você por
+        e-mail para tentar solucionar o problema o mais rápido possível!
+      </p>
+    </label>
+    <input id="faq-e" type="checkbox" />
+    <label for="faq-e">
+      <p class="faq-heading">
+        Onde Visualizar Preço, Condições e Benefícios da Assinatura? Mensal?
+      </p>
+      <div class="faq-arrow"></div>
+      <p class="faq-text">
+        Todas as informações a respeito do Plano de Assinatura Mensal você
+        encontra na página de Preços do Soar. Lá estão expostos o preço, todos
+        os benefícios que o plano inclui, a frequência de cobranças e o botão
+        para Contratar o plano. Lá também estão expostos os benefícios do Plano
+        Free, que é gratuito. Dúvidas adicionais também podem ser tiradas
+        através do atendimento Soar, via e-mail
+      </p>
+    </label>
+    <input id="settings" type="checkbox" />
+    <input id="faq-f" type="checkbox" />
+    <label for="faq-f">
+      <p class="faq-heading">
+        Sou Assinante, mas quero Cancelar o plano. Como devo proceder?
+      </p>
+      <div class="faq-arrow"></div>
+      <p class="faq-text">
+        Se você é assinante mensal do Soar, mas não deseja mais utilizar o plano
+        de assinatura e não sabe como efetuar o cancelamento, é simples. Basta
+        você fazer o login na plataforma acessando: Soar | Entrar . Ao efetuar o
+        login, você vai acessar a aba "Painel" e depois a sub-aba "Assinatura".
+        Lá, clicará no botão "Cancelar Assinatura". Confirmando o cancelamento,
+        você não terá mais cobranças do sistema para o plano de assinatura (a
+        menos que você volte a contratá-lo posteriormente). O seu plano ficará
+        ativo na sua conta até o fim da vigência da mensalidade atual já paga e
+        depois migrará automaticamente para o plano Free do Soar (que é
+        gratuito). Caso você tenha dúvidas no processo, basta acionar o nosso
+        atendimento através do e-mail: contact@soarmp3.com ou através da seção
+        "Contato" em Soar | Contato
+      </p>
+    </label>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="contTextForm">
+    <div class="contFull">
+      <div class="title">Precisa de ajuda?</div>
+      <div class="text">
+        Nos envie uma mensagem <br />
+        Ou envie email para aline@aline.com.br
+      </div>
+    </div>
+  </div>
+  <div class="contFormContact">
+    <label> E-mail </label>
+    <input placeholder="Qual seu e-mail?" />
+    <label> Senha </label>
+    <input placeholder="Crie uma senha" />
+    <label> Mensagem </label>
+    <textarea id="story" name="story" rows="5" cols="33">
+      It was a dark and stormy night...
+      </textarea
+    >
+
+    <div class="buttonDefault">
+      <button>Enviar mensagem</button>
+    </div>
+  </div>
+  <div class="protegido">
+    Este site é protegido pelo reCAPTCHA e são aplicáveis ​​a Política de
+    Privacidade e os Termos de Serviço do Google.
+  </div>
+</section>

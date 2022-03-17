@@ -1,0 +1,49 @@
+#register {
+  width: 100%;
+  float: left;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+
+  .contTela {
+    width: 48vw;
+    float: left;
+    text-align: center;
+    height: 100vh;
+  }
+
+  .text {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+
+  .contTelaImg {
+    width: 50vw;
+    height: 100vh;
+    float: right;
+    background-image: url(/assets/images/background-login.png) !important;
+  }
+
+  .logo {
+    margin: 35px auto;
+    width: 200px;
+
+    img {
+      width: 80%;
+    }
+  }
+
+  .redeSocial {
+    width: 100%;
+    float: left;
+    margin: 10px 0;
+
+    img {
+      margin: 0 10px 0 0;
+      width: 30px !important;
+    }
+  }
+
+
+}
