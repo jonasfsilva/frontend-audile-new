@@ -1,70 +1,31 @@
-header {
-  width: 96%;
-  float: left;
-  height: 100px;
-  padding: 0 2%;
-  margin: 0;
-
-  .menu {
-    width: 60%;
-    float: left;
-    margin-top: 30px;
-
-    ul {
-      padding: 0;
-      margin: 0;
-    }
-
-    a {
-      text-decoration: none;
-      color: var(--color-primary);
-    }
-
-    li {
-      width: auto;
-      padding: 10px 20px;
-      font-size: 13px;
-      cursor: pointer;
-      text-decoration: none;
-      float: left;
-      list-style-type: none;
-      color: var(--color-primary);
-    }
-  }
-
-  .logo {
-    float: left;
-    margin: 35px 0 0 0;
-
-    img {
-      width: 80%;
-    }
-  }
-
-  .buttonOutline {
-    margin-top: 25px;
-    float: right;
-
-    button {
-      color: var(--color-primary);
-      background-color: transparent;
-      border-radius: 30px;
-      padding: 14px 30px;
-      border: 0;
-      font-weight: bold;
-      float: right;
-      font-size: 13px;
-      font-family: 'Montserrat', sans-serif;
-    }
-  }
-
-
+.contButtonHeader {
+  float: right;
+  margin: 15px 15px 0 0;
 }
+
+.buttonOutline {
+  margin-top: 11px;
+  float: right;
+
+  button {
+    color: var(--color-primary);
+    background-color: transparent;
+    border-radius: 30px;
+    padding: 14px 30px;
+    border: 0;
+    font-weight: bold;
+    float: right;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+
 
 .buttonDefault {
   width: 150px !important;
   float: right !important;
-  margin: 30px 0 0 0 !important;
+  margin: 10px 0 0 0 !important;
 }
 
 #home {
@@ -94,6 +55,7 @@ header {
     box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.04);
     color: var(--color-primary);
     text-align: center;
+    margin-bottom: 30px;
     font-weight: bold;
 
     .cont-text {
@@ -720,94 +682,345 @@ header {
     float: left;
   }
 
-  .faq-heading {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    -webkit-transition: text-indent 0.2s;
-    text-indent: 20px;
-    color: #333;
+
+
+}
+
+::ng-deep.ngx-audio-player {
+  margin: 0px !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+}
+
+
+@media (max-width: 900px) {
+
+  #comoFunciona {
+    .item {
+      text-align: center !important;
+      width: 100%;
+    }
+
+    .contFullSlider {
+      display: block;
+      width: 100%;
+      float: left;
+    }
   }
 
-  .faq-text {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    color: #919191;
-    width: 95%;
-    padding-left: 20px;
-    margin-bottom: 30px;
+  #contato {
+    text-align: center !important;
+
+    .title {
+      text-align: center !important;
+      width: 100%;
+    }
+
+    .contTextForm {
+      width: 100%;
+    }
+
+    .contFormContact {
+      width: 100%;
+    }
   }
 
-  .faq {
-    width: 1000px;
+  .protegido {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  #home {
+    .cont-info-banner {
+      width: 100%;
+    }
+
+
+    .banner {
+      margin: 20px 0;
+    }
+
+    .text {
+      width: 100%;
+      text-align: center;
+    }
+
+    .chamada {
+      width: 100%;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .info {
+      width: 96%;
+      padding: 10% 2%;
+      margin: 20px 0;
+    }
+
+    .card {
+      top: 0;
+      position: initial;
+      width: 241px;
+      margin: 20px auto;
+      float: none;
+    }
+  }
+
+  #faq {
+    padding: 1vh 5%;
+
+    .faq {
+      width: 100%;
+
+    }
+  }
+
+  #planos {
+    .contPlanosAdmin {
+      margin: 20px 0 0 0;
+
+      .pricing {
+        display: block;
+
+        .plan {
+          margin: 30px 0;
+
+        }
+      }
+    }
+  }
+
+  #converterAudio {
+    .contText {
+      width: 100% !important;
+      text-align: center;
+    }
+
+    .audio {
+      text-align: center;
+      width: 100% !important;
+    }
+
+    select {
+      width: 100% !important;
+      margin: 20px 0 0 0 !important;
+    }
+
+    .cont-play {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  .contButtonHeader {
+    float: none;
     margin: 0 auto;
-    background: white;
-    border-radius: 4px;
-    position: relative;
+    width: 253px;
+    padding: 0;
+  }
+}
+
+
+
+
+.header {
+  background-color: #fff;
+
+  width: 100%;
+  color: #24336B;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+  color: #24336B
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 17px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  cursor: pointer;
+  display: inline-block;
+  position: fixed;
+  -webkit-user-select: none;
+  top: 3px;
+  right: 10px;
+  width: 30px;
+  padding: 10px;
+  height: 30px;
+  border-radius: 90px;
+  background: white;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 100%;
+  top: 13px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked~.menu {
+  max-height: 240px;
+  position: fixed;
+  width: 100%;
+  top: 90px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: (0px 0px 12px rgba(0, 0, 0, 0.1));
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
   }
 
-  .faq label {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    height: 56px;
-    padding-top: 1px;
-
-    background-color: #FAFAFA;
+  .header li a {
+    padding: 20px 30px;
   }
 
-  .faq input[type="checkbox"] {
-    display: none;
-  }
-
-  .faq .faq-arrow {
-    width: 5px;
-    height: 5px;
-    transition: -webkit-transform 0.8s;
-    transition: transform 0.8s;
-    transition: transform 0.8s, -webkit-transform 0.8s;
-    -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    border-top: 2px solid rgba(0, 0, 0, 0.33);
-    border-right: 2px solid rgba(0, 0, 0, 0.33);
+  .header .menu {
+    clear: none;
     float: right;
-    position: relative;
-    top: -30px;
-    right: 27px;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+    max-height: none;
+    margin: 21px 0 0 0;
   }
 
-  .faq input[type="checkbox"]:checked+label>.faq-arrow {
-    transition: -webkit-transform 0.8s;
-    transition: transform 0.8s;
-    transition: transform 0.8s, -webkit-transform 0.8s;
-    -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-  }
-
-  .faq input[type="checkbox"]:checked+label {
-    display: block;
-    background: #f2f2f2 !important;
-    color: #4f7351;
-    height: auto;
-    transition: height 0.8s;
-    -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    border-radius: 10px;
-  }
-
-  .faq input[type='checkbox']:not(:checked)+label {
-    display: block;
-    transition: height 0.8s;
-    height: 45px;
-    border-radius: 10px;
-    -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-
-  ::-webkit-scrollbar {
+  .header .menu-icon {
     display: none;
   }
 
+  .header .logo {
+    padding: 30px 20px 17px 20px;
+  }
+}
 
+.faq__content {
+  p {
+    text-align: left;
+    padding: 1rem;
+  }
+}
+
+summary {
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #fff;
+  color: #333;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px solid #f2f2f2;
+  float: left;
+  width: 100%;
+}
+
+details>summary::after {
+  position: absolute;
+  content: "+";
+  right: 20px;
+}
+
+details[open]>summary::after {
+  position: absolute;
+  content: "-";
+  right: 20px;
+}
+
+details>summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary~* {
+  animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    margin-top: -10px
+  }
+
+  100% {
+    opacity: 1;
+    margin-top: 0px
+  }
 }

@@ -281,3 +281,18 @@ select {
 
 
 }
+
+
+
+@media (max-width: 900px) {
+    .cont-info {
+        width: 95%;
+        padding: 2.5%;
+
+        .cont-form {
+            width: 100%;
+        }
+    }
+
+
+}

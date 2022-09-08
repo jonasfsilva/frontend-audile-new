@@ -47,3 +47,20 @@
 
 
 }
+
+@media (max-width: 900px) {
+  #register {
+    .contTelaImg {
+      display: none;
+    }
+
+    .contTela {
+      width: 100%;
+    }
+
+    .contForm {
+      width: 90%;
+      margin: 0 0 0 5%;
+    }
+  }
+}

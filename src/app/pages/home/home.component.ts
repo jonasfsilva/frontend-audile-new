@@ -10,8 +10,8 @@ export class HomeComponent implements OnInit {
   msaapDisplayTitle = false;
   msaapDisplayPlayList = false;
   msaapPageSizeOptions = [2, 4, 6];
-  msaapDisplayVolumeControls = true;
-  msaapDisplayRepeatControls = true;
+  msaapDisplayVolumeControls = false;
+  msaapDisplayRepeatControls = false;
   msaapDisplayArtist = false;
   msaapDisplayDuration = false;
   msaapDisablePositionSlider = false;

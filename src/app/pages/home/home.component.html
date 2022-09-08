@@ -1,20 +1,21 @@
-<header>
-  <div class="logo"><img src="./assets/images/logo-audile.png" /></div>
-
-  <div class="menu">
-    <ul>
-      <li><a href="#converterAudio">Vozes</a></li>
-      <li><a href="#comoFunciona">Como funciona</a></li>
-      <li><a href="#planos">Preços</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
+<header class="header">
+  <a href="" class="logo"><img src="./assets/images/logo-audile.png" /></a>
+  <div class="contButtonHeader">
+    <div class="buttonDefault">
+      <button routerLink="/register">Criar conta</button>
+    </div>
+    <div class="buttonOutline">
+      <button routerLink="/login">Login</button>
+    </div>
   </div>
-  <div class="buttonDefault">
-    <button routerLink="/register">Criar conta</button>
-  </div>
-  <div class="buttonOutline">
-    <button routerLink="/login">Login</button>
-  </div>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="#converterAudio">Vozes</a></li>
+    <li><a href="#comoFunciona">Como funciona</a></li>
+    <li><a href="#planos">Preços</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
 </header>
 <section id="home">
   <div class="banner">
@@ -200,8 +201,7 @@
         <button>Comprar</button>
       </div>
       <div class="plan">
-        <h2>Plano</h2>
-        <div class="price">Anual</div>
+        <h2>Anual</h2>
         <div class="price">R$ 89,00</div>
         <ul class="features">
           <li>3 Páginas por dia</li>
@@ -222,109 +222,52 @@
     com<br />
     as melhores vozes do mercado!
   </div>
-  <div class="faq">
-    <input id="faq-a" type="checkbox" />
-    <label for="faq-a">
-      <p class="faq-heading">Como criar uma conta no Audile?</p>
-      <div class="faq-arrow"></div>
-      <p class="faq-text">
-        Para criar uma conta no Audile, basta você efetuar um cadastro em:
-        <b>Criar conta.</b>
-        Ao entrar neste link, você preencherá os dados necessários solicitados,
-        tais como nome, sobrenome e e-mail e, ao confirmar os dados, você
-        receberá em sua Caixa de Entrada um e-mail de ativação da conta. É
-        necessário você fazer essa ativação para que o Soar possa concluir a
-        validação do seu e-mail, pois será através dele que estabeleceremos
-        nossa comunicação.
-      </p>
-    </label>
-    <input id="faq-b" type="checkbox" />
-    <label for="faq-b">
-      <p class="faq-heading">
-        Posso usar o serviço do Soar antes de criar uma conta?
-      </p>
-      <div class="faq-arrow"></div>
-      <p class="faq-text">
-        Não. Para usar a nossa plataforma, é necessário se cadastrar e ativar a
-        sua conta no Soar, conforme informamos na pergunta 1.
-      </p>
-    </label>
-    <input id="faq-c" type="checkbox" />
-    <label for="faq-c">
-      <p class="faq-heading">
-        Esqueci a minha senha do login. Como consigo recuperar?
-      </p>
-      <div class="faq-arrow"></div>
-      <p class="faq-text">
-        Simples. Se você esqueceu a sua senha, basta acessar a página de login
-        do Soar em Soar | Entrar. Abaixo dos campos de preenchimento de e-mail e
-        senha, você verá a mensagem: "Esqueceu sua senha? Não se preocupe,
-        clique aqui para resetar sua senha". Neste link você poderá resetar sua
-        senha e receberá em seu e-mail um novo link de acesso à sua conta para
-        criar a nova senha. Se você enfrentar dificuldades com o processo ou não
-        receber esse link no e-mail, você pode entrar em contato com o Suporte
-        ao Usuário do Soar, através do link: Soar | Contato ou diretamente pelo
-        e-mail contact@soarmp3.com, relatando com detalhes o problema. A nossa
-        equipe vai ajudar você a resolver a questão.
-      </p>
-    </label>
-    <input id="faq-d" type="checkbox" />
-    <label for="faq-d">
-      <p class="faq-heading">
-        Não recebi o e-mail de ativação. Como devo proceder?
-      </p>
-      <div class="faq-arrow"></div>
-      <p class="faq-text">
-        Se você efetuou todo o cadastro certinho em Soar | Registrar e não
-        recebeu em sua Caixa de Entrada o e-mail de ativação do Soar, não se
-        preocupe! Primeiramente é sempre bom checar se esse e-mail chegou em
-        alguma outra Caixa do seu e-mail, como a Caixa de Spam, por exemplo. É
-        raro, mas pode acontecer. Mas se já demorou muito tempo e você não
-        recebeu o e-mail, você pode entrar em contato com o Suporte ao Usuário
-        do Soar, através do link: Soar | Contato ou diretamente pelo e-mail
-        contact@soarmp3.com . A nossa equipe de atendimento fará o re-envio
-        desse e-mail de ativação ou se comunicará diretamente com você por
-        e-mail para tentar solucionar o problema o mais rápido possível!
-      </p>
-    </label>
-    <input id="faq-e" type="checkbox" />
-    <label for="faq-e">
-      <p class="faq-heading">
-        Onde Visualizar Preço, Condições e Benefícios da Assinatura? Mensal?
-      </p>
-      <div class="faq-arrow"></div>
-      <p class="faq-text">
-        Todas as informações a respeito do Plano de Assinatura Mensal você
-        encontra na página de Preços do Soar. Lá estão expostos o preço, todos
-        os benefícios que o plano inclui, a frequência de cobranças e o botão
-        para Contratar o plano. Lá também estão expostos os benefícios do Plano
-        Free, que é gratuito. Dúvidas adicionais também podem ser tiradas
-        através do atendimento Soar, via e-mail
-      </p>
-    </label>
-    <input id="settings" type="checkbox" />
-    <input id="faq-f" type="checkbox" />
-    <label for="faq-f">
-      <p class="faq-heading">
-        Sou Assinante, mas quero Cancelar o plano. Como devo proceder?
-      </p>
-      <div class="faq-arrow"></div>
-      <p class="faq-text">
+  <details open>
+    <summary>Como criar uma conta?</summary>
+    <div class="faq__content">
+      <p>
         Se você é assinante mensal do Soar, mas não deseja mais utilizar o plano
         de assinatura e não sabe como efetuar o cancelamento, é simples. Basta
         você fazer o login na plataforma acessando: Soar | Entrar . Ao efetuar o
-        login, você vai acessar a aba "Painel" e depois a sub-aba "Assinatura".
-        Lá, clicará no botão "Cancelar Assinatura". Confirmando o cancelamento,
-        você não terá mais cobranças do sistema para o plano de assinatura (a
-        menos que você volte a contratá-lo posteriormente). O seu plano ficará
-        ativo na sua conta até o fim da vigência da mensalidade atual já paga e
-        depois migrará automaticamente para o plano Free do Soar (que é
-        gratuito). Caso você tenha dúvidas no processo, basta acionar o nosso
-        atendimento através do e-mail: contact@soarmp3.com ou através da seção
-        "Contato" em Soar | Contato
+        login.
       </p>
-    </label>
-  </div>
+    </div>
+  </details>
+  <details>
+    <summary>Como criar uma conta?</summary>
+    <div class="faq__content">
+      <p>
+        Se você é assinante mensal do Soar, mas não deseja mais utilizar o plano
+        de assinatura e não sabe como efetuar o cancelamento, é simples. Basta
+        você fazer o login na plataforma acessando: Soar | Entrar . Ao efetuar o
+        login.
+      </p>
+    </div>
+  </details>
+  <details>
+    <summary>Posso usar o serviço antes de criar uma conta?</summary>
+    <div class="faq__content">
+      <p>
+        Se você é assinante mensal do Soar, mas não deseja mais utilizar o plano
+        de assinatura e não sabe como efetuar o cancelamento, é simples. Basta
+        você fazer o login na plataforma acessando: Soar | Entrar . Ao efetuar o
+        login.
+      </p>
+    </div>
+  </details>
+  <details>
+    <summary>
+      Sou Assinante, mas quero Cancelar o plano. Como devo proceder?
+    </summary>
+    <div class="faq__content">
+      <p>
+        Se você é assinante mensal do Soar, mas não deseja mais utilizar o plano
+        de assinatura e não sabe como efetuar o cancelamento, é simples. Basta
+        você fazer o login na plataforma acessando: Soar | Entrar . Ao efetuar o
+        login.
+      </p>
+    </div>
+  </details>
 </section>
 
 <section id="contato">
