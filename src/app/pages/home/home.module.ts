@@ -4,6 +4,7 @@ import { NgxAudioPlayerModule } from "ngx-audio-player";
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, NgxAudioPlayerModule],
+  // imports: [CommonModule, NgxAudioPlayerModule],
+  imports: [CommonModule],
 })
 export class HomeModule {}
