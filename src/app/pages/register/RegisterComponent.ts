@@ -1,23 +1,31 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UserService } from 'src/app/services/user.service';
 
+// import { Validation } from './utils/validation'
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: "app-register",
+  templateUrl: "./register.component.html",
+  styleUrls: ["./register.component.scss"],
 })
-export class LoginComponent implements OnInit {
+export class RegisterComponent implements OnInit {
   form!: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder, private user_service: UserService) { }
-  
+  constructor(private formBuilder: FormBuilder) { }
+
   ngOnInit(): void {
     this.form = this.formBuilder.group(
       {
+        fullname: ['', Validators.required],
+        // username: [
+        //   '',
+        //   [
+        //     Validators.required,
+        //     Validators.minLength(6),
+        //     Validators.maxLength(20)
+        //   ]
+        // ],
         email: ['', [Validators.required, Validators.email]],
         password: [
           '',
@@ -27,6 +35,8 @@ export class LoginComponent implements OnInit {
             Validators.maxLength(40)
           ]
         ],
+        // confirmPassword: ['', Validators.required],
+        // acceptTerms: [false, Validators.requiredTrue]
       }
     );
   }
@@ -35,7 +45,7 @@ export class LoginComponent implements OnInit {
     return this.form.controls;
   }
 
-  onLogin(): void {
+  onSubmit(): void {
     console.log('submit')
     this.submitted = true;
 
@@ -44,15 +54,10 @@ export class LoginComponent implements OnInit {
     }
 
     console.log(JSON.stringify(this.form.value, null, 2));
-    
-    var data = JSON.stringify(this.form.value, null, 2);
-    this.user_service.login(data);
-
   }
 
   onReset(): void {
     this.submitted = false;
     this.form.reset();
   }
-  
 }
