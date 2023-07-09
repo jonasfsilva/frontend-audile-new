@@ -15,7 +15,7 @@
         <label> Senha </label>
         <input placeholder="Crie uma senha" />
         <div class="buttonDefault">
-          <button routerLink="/admin">Acessar conta</button>
+          <button (click)="login()">Acessar conta</button>
         </div>
         <div class="contFull notAccount">
           Não possui acesso? <b routerLink="/register">Crie agora!</b>

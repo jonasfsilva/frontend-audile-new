@@ -13,6 +13,9 @@ import { LoginComponent } from "./pages/login/login.component";
 import { RegisterComponent } from "./pages/register/register.component";
 // import { NgxAudioPlayerModule } from "ngx-audio-player";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MyDataComponent,
   ],
   // imports: [BrowserModule, AppRoutingModule, NgxAudioPlayerModule, BrowserAnimationsModule],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
