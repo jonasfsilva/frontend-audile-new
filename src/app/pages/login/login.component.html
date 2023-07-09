@@ -10,16 +10,18 @@
 
     <div class="contFull">
       <div class="contForm">
-        <label> E-mail </label>
-        <input placeholder="Qual seu e-mail?" />
-        <label> Senha </label>
-        <input placeholder="Crie uma senha" />
-        <div class="buttonDefault">
-          <button (click)="onLogin()">Acessar conta</button>
-        </div>
-        <div class="contFull notAccount">
-          Não possui acesso? <b routerLink="/register">Crie agora!</b>
-        </div>
+        <form [formGroup]="form" (ngSubmit)="onLogin()">
+          <label> E-mail </label>
+          <input placeholder="Qual seu e-mail?" formControlName="email"/>
+          <label> Senha </label>
+          <input placeholder="Crie uma senha" formControlName="password"/>
+          <div class="buttonDefault">
+            <button>Acessar conta</button>
+          </div>
+          <div class="contFull notAccount">
+            Não possui acesso? <b routerLink="/register">Crie agora!</b>
+          </div>
+        </form>
       </div>
     </div>
   </div>

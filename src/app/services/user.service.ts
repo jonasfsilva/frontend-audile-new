@@ -20,6 +20,10 @@ export class UserService {
         this.tokenService.store(data)
       })
   }
+
+  logout() {}
+  signUp() {}
+  updateProfile() {}
   
 
   // login
