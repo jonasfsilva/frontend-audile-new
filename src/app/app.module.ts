@@ -10,7 +10,7 @@ import { MyDataComponent } from "./pages/admin/my-data/my-data.component";
 import { PlansComponent } from "./pages/admin/plans/plans.component";
 import { HomeComponent } from "./pages/home/home.component";
 import { LoginComponent } from "./pages/login/login.component";
-import { RegisterComponent } from "./pages/register/RegisterComponent";
+import { RegisterComponent } from "./pages/register/register.component";
 // import { NgxAudioPlayerModule } from "ngx-audio-player";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HttpClientModule } from "@angular/common/http";
