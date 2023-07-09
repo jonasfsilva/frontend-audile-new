@@ -21,12 +21,12 @@ export class LoginComponent implements OnInit {
       "username": "admin@gmail.com",
       "password": "1@345678"
     }
-  
+    
+    // events: `${environment.algoliaUrlEvent}/events`,
     this.http.post(`http://localhost:8000/v1/auth/login/`, data)
       .subscribe((data) => {
         console.log(data);
         this.tokenService.store(data)
       })
   }
-  
 }
