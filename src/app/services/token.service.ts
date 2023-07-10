@@ -18,6 +18,11 @@ export class TokenService{
       return storedToken;
   }
 
+  public delete() {
+    let token = localStorage.removeItem(this.tokenKey);
+    return token;
+  }
+
   // public generateNewToken() {
   //     let token:string = '...';//custom token generation;
   //     let currentTime:number = (new Date()).getTime() + ttl;

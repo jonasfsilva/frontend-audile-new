@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: "https://api.audile.com.br"
+  apiUrl: "http://localhost:8000"
 };
 
 /*

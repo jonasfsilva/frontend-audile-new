@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
 
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
   form!: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder, private user_service: UserService) { }
+  constructor(private formBuilder: FormBuilder, private user_service: UserService, private router: Router) { }
   
   ngOnInit(): void {
     this.form = this.formBuilder.group(
@@ -46,8 +47,10 @@ export class LoginComponent implements OnInit {
     console.log(JSON.stringify(this.form.value, null, 2));
     
     var data = JSON.stringify(this.form.value, null, 2);
-    this.user_service.login(data);
 
+    this.user_service.login(data)
+    this.router.navigate(['/admin']);
+    
   }
 
   onReset(): void {

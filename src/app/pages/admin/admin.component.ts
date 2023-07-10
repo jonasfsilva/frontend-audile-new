@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { UserService } from "src/app/services/user.service";
 
 @Component({
   selector: "app-admin",
@@ -12,9 +14,16 @@ export class AdminComponent implements OnInit {
   plans = false;
   myAudios = false;
   clickMenu = false;
-  constructor() {}
+  
+  constructor(private user_service: UserService, private router: Router) {}
 
   ngOnInit(): void {}
+
+  logout(){
+    console.log('adasds')
+    this.user_service.logout();
+    this.router.navigate([""]);
+  }
 
   async changeTab(selectedTab: string) {
     this.selectedTab = selectedTab;
