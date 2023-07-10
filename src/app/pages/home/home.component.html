@@ -286,20 +286,25 @@
     </div>
   </div>
   <div class="contFormContact">
-    <label> E-mail </label>
-    <input placeholder="Qual seu e-mail?" />
-    <label> Senha </label>
-    <input placeholder="Crie uma senha" />
-    <label> Mensagem </label>
-    <textarea id="story" name="story" rows="5" cols="33">
-      It was a dark and stormy night...
-      </textarea
-    >
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmitContact()">
 
-    <div class="buttonDefault">
-      <button>Enviar mensagem</button>
-    </div>
+      <label> E-mail </label>
+      <input placeholder="Qual seu e-mail?" formControlName="name"/>
+      <label> Senha </label>
+      <input placeholder="Crie uma senha" formControlName="email"/>
+      <label> Mensagem </label>
+      <textarea formControlName="message" id="story" name="story" rows="5" cols="33">
+        It was a dark and stormy night...
+        </textarea
+      >
+
+      <div class="buttonDefault">
+        <button>Enviar mensagem</button>
+      </div>
+
+    </form>
   </div>
+
   <div class="protegido">
     Este site é protegido pelo reCAPTCHA e são aplicáveis ​​a Política de
     Privacidade e os Termos de Serviço do Google.

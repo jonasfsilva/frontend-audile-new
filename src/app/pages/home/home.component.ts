@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { FormBuilder, Validators } from "@angular/forms";
+import { SettingsService } from "src/app/services/settings.service";
 import { UserService } from "src/app/services/user.service";
 // import { Track } from "ngx-audio-player";
 @Component({
@@ -7,9 +9,14 @@ import { UserService } from "src/app/services/user.service";
   styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
-  isLogged: boolean
+  isLogged: boolean;
+  contactForm: any;
 
-  constructor(private user_service: UserService) {
+  constructor(
+    private user_service: UserService,
+    private formBuilder: FormBuilder,
+    private settings_service: SettingsService
+  ) {
     this.isLogged = this.user_service.isLogged();
   }
   msaapDisplayTitle = false;
@@ -33,6 +40,24 @@ export class HomeComponent implements OnInit {
   // ];
 
   ngOnInit(): void {
+    this.contactForm = this.formBuilder.group({
+      name: ["", [Validators.required]],
+      email: ["", [Validators.required, Validators.email]],
+      message: ["", [Validators.required, Validators.minLength(3)]],
+    });
+  }
 
+  onSubmitContact(): void {
+    console.log("submit");
+
+    if (this.contactForm.invalid) {
+      return;
+    }
+
+    console.log(JSON.stringify(this.contactForm.value, null, 2));
+
+    var data = JSON.stringify(this.contactForm.value, null, 2);
+    this.settings_service.sendContact(data);
+    // this.router.navigate(['/admin']);
   }
 }
