@@ -1,11 +1,16 @@
 <header class="header">
   <a href="" class="logo"><img src="./assets/images/logo-audile.png" /></a>
-  <div class="contButtonHeader">
+  <div class="contButtonHeader" *ngIf="!isLogged">
     <div class="buttonDefault">
       <button routerLink="/register">Criar conta</button>
     </div>
     <div class="buttonOutline">
       <button routerLink="/login">Login</button>
+    </div>
+  </div>
+  <div class="contButtonHeaderLogged" *ngIf="isLogged">
+    <div class="buttonDefault">
+      <button routerLink="/admin">Acessar Painel</button>
     </div>
   </div>
   <input class="menu-btn" type="checkbox" id="menu-btn" />

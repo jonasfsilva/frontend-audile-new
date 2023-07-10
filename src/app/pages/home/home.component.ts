@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { UserService } from "src/app/services/user.service";
 // import { Track } from "ngx-audio-player";
 @Component({
   selector: "app-home",
@@ -6,7 +7,11 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  isLogged: boolean
+
+  constructor(private user_service: UserService) {
+    this.isLogged = this.user_service.isLogged();
+  }
   msaapDisplayTitle = false;
   msaapDisplayPlayList = false;
   msaapPageSizeOptions = [2, 4, 6];
@@ -27,5 +32,7 @@ export class HomeComponent implements OnInit {
   //   },
   // ];
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
 }

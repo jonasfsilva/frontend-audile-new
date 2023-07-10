@@ -50,13 +50,11 @@ export class UserService {
         },
       )
   }
+
+  isLogged() {
+    return this.tokenService.isLogged();
+  }
   
   updateProfile() {}
-  
 
-  // login
-  // criar conta
-  // editar conta
-
-  // pegar o token pra por nas requisicoes logadas
 }
