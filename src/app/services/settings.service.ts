@@ -32,4 +32,9 @@ export class SettingsService {
         }
       )
   }
+
+  getVoices() {
+    var base_url =  `${environment.apiUrl}/v1/configurations/voices/`
+    return this.http.get(`${base_url}`, {headers: new HttpHeaders(this.headers)})
+  }
 }

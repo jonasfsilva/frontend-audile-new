@@ -1,39 +1,39 @@
 <div class="cont-info">
-  <div class="title">Converter texto</div>
-  <div class="contFormConverter">
-    Idioma:
-    <select name="select">
-      <option value="valor1">Alemão</option>
-      <option value="valor2" selected>Português</option>
-      <option value="valor3">Inglês</option>
-    </select>
+  <form [formGroup]="conversionForm" (ngSubmit)="onSubmitConversion()">
+    <div class="title">Converter texto</div>
+    <div class="contFormConverter">
+      Idioma:
+      <select name="select">
+        <option value="valor1">Alemão</option>
+        <option value="valor2" selected>Português</option>
+        <option value="valor3">Inglês</option>
+      </select>
 
-    Voz:
-    <select name="select">
-      <option value="valor1">Alemão</option>
-      <option value="valor2" selected>Português</option>
-      <option value="valor3">Inglês</option>
-    </select>
+      Voz:
+      <select name="select" formControlName="voice">
+        <option *ngFor="let voicee of voices" [value]="voicee.id">  {{ voicee.name }}   </option>
+      </select>
 
-    Velocidade:
-    <select name="select">
-      <option value="valor1">Alemão</option>
-      <option value="valor2" selected>Português</option>
-      <option value="valor3">Inglês</option>
-    </select>
-    <div class="espacamento"></div>
-    <div class="contFull">
-      <label>Titulo</label>
-      <input placeholder="Digite seu nome completo" />
+      <!-- Velocidade: -->
+      <!-- select name="select">
+        <option value="valor1">Alemão</option>
+        <option value="valor2" selected>Português</option>
+        <option value="valor3">Inglês</option>
+      </select -->
+      <div class="espacamento"></div>
+      <div class="contFull">
+        <label>Titulo</label>
+        <input formControlName="title" placeholder="Digite seu nome completo" />
 
-      <label>Mensagem</label>
-      <textarea id="story" name="story" rows="5" cols="33">
-        It was a dark and stormy night...
-        </textarea
-      >
-      <div class="buttonDefault">
-        <button>Converter texto</button>
+        <label>Mensagem</label>
+        <textarea formControlName="text" id="story" name="story" rows="5" cols="33">
+          It was a dark and stormy night...
+          </textarea
+        >
+        <div class="buttonDefault">
+          <button>Converter texto</button>
+        </div>
       </div>
     </div>
-  </div>
+  </form>
 </div>
