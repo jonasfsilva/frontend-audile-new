@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, Validators } from "@angular/forms";
+import { PlansService } from "src/app/services/plans.service";
 import { SettingsService } from "src/app/services/settings.service";
 import { UserService } from "src/app/services/user.service";
 // import { Track } from "ngx-audio-player";
@@ -11,13 +12,16 @@ import { UserService } from "src/app/services/user.service";
 export class HomeComponent implements OnInit {
   isLogged: boolean;
   contactForm: any;
+  plans: any;
 
   constructor(
     private user_service: UserService,
     private formBuilder: FormBuilder,
-    private settings_service: SettingsService
+    private settings_service: SettingsService,
+    private plans_service: PlansService
   ) {
     this.isLogged = this.user_service.isLogged();
+    this.getCommonPlans();
   }
   msaapDisplayTitle = false;
   msaapDisplayPlayList = false;
@@ -45,6 +49,23 @@ export class HomeComponent implements OnInit {
       email: ["", [Validators.required, Validators.email]],
       message: ["", [Validators.required, Validators.minLength(3)]],
     });
+  }
+
+  getCommonPlans(){
+    this.plans_service.getPlans().subscribe(
+      {
+        next: (response: any) => {
+          console.log(response)
+          this.plans = response
+        },
+        error: (err: any) => {
+          console.log(err)
+        },
+        complete() {
+          console.log('fim')
+        },
+      }
+    )
   }
 
   onSubmitContact(): void {

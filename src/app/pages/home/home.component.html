@@ -193,6 +193,24 @@
           <li>2 Vozes</li>
         </ul>
       </div>
+
+      <!-- Ng for -->
+      
+      <div *ngFor = "let current_plan of plans" class="plan">
+        <span *ngIf="current_plan.recommended"> Plano Recomendado</span>
+        <h2>{{current_plan.title}}</h2>
+        <div class="price">R$ {{current_plan.price}}</div>
+        <ul class="features">
+          <li>3 Páginas por dia</li>
+          <li>Baixe áudio em mp3</li>
+          <li>Áudio de até 1 página</li>
+          <li>2 Vozes</li>
+        </ul>
+        <button>Comprar</button>
+      </div>  
+
+      <!--
+        
       <div class="plan popular">
         <span>Plano Recomendado</span>
         <h2>Pro</h2>
@@ -216,6 +234,9 @@
         </ul>
         <button>Comprar</button>
       </div>
+
+      -->
+
     </div>
   </div>
 </section>

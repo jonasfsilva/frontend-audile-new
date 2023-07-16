@@ -46,4 +46,24 @@ export class LibraryService {
       )
   }
 
+  getConversions() {
+    let headers = this.makeHeaders();
+    var base_url =  `${environment.apiUrl}/v1/library/operations/`
+    this.http.get(`${base_url}`, {headers: new HttpHeaders(headers)})
+      .subscribe(
+        {
+          next: (response: any) => {
+            console.log(response)
+            return response
+          },
+          error: (err: any) => {
+            return err
+          },
+          complete() {
+            console.log('fim')
+          },
+        }
+      )
+  }
+
 }

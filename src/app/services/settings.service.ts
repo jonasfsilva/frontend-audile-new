@@ -37,4 +37,10 @@ export class SettingsService {
     var base_url =  `${environment.apiUrl}/v1/configurations/voices/`
     return this.http.get(`${base_url}`, {headers: new HttpHeaders(this.headers)})
   }
+
+  getFaqs() {
+    var base_url =  `${environment.apiUrl}/v1/configurations/faqs/`
+    return this.http.get(`${base_url}`, {headers: new HttpHeaders(this.headers)})
+  }
+
 }
