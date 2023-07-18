@@ -2,8 +2,8 @@
   <div class="title">Planos Audile</div>
   <div class="contPlanosAdmin">
     <div class="pricing">
-      <div class="plan">
-        <h2>Plano</h2>
+      <!-- div *ngFor = "let current_plan of plans" class="plan">
+        <h2>{{current_plan.title}}</h2>
         <div class="price">FREE</div>
         <ul class="features">
           <li>3 Páginas por dia</li>
@@ -11,11 +11,12 @@
           <li>Áudio de até 1 página</li>
           <li>2 Vozes</li>
         </ul>
-      </div>
-      <div class="plan popular">
-        <span>Plano Recomendado</span>
+      </div -->
+      <div *ngFor = "let current_plan of plans" class="plan">
+      <!-- div class="plan popular" -->
+        <span>{{current_plan.title}}</span>
         <h2>Pro</h2>
-        <div class="price">R$ 19,00</div>
+        <div class="price">R$ {{current_plan.price}}</div>
         <ul class="features">
           <li>3 Páginas por dia</li>
           <li>Baixe áudio em mp3</li>
@@ -24,7 +25,7 @@
         </ul>
         <button>Comprar</button>
       </div>
-      <div class="plan">
+      <!-- div class="plan">
         <h2>Plano</h2>
         <div class="price">Anual</div>
         <div class="price">R$ 89,00</div>
@@ -35,7 +36,7 @@
           <li>2 Vozes</li>
         </ul>
         <button>Comprar</button>
-      </div>
+      </div -->
     </div>
   </div>
 </div>
