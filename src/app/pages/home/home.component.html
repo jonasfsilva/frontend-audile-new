@@ -1,5 +1,5 @@
 <header class="header">
-  <a href="" class="logo"><img src="./assets/images/logo-audile.png" /></a>
+  <a href="/" class="logo"><img src="./assets/images/logo-audile.png" /></a>
   <div class="contButtonHeader" *ngIf="!isLogged">
     <div class="buttonDefault">
       <button routerLink="/register">Criar conta</button>
@@ -183,6 +183,7 @@
   </div>
   <div class="contPlanosAdmin">
     <div class="pricing">
+      <!--
       <div class="plan">
         <h2>Plano</h2>
         <div class="price">FREE</div>
@@ -193,7 +194,8 @@
           <li>2 Vozes</li>
         </ul>
       </div>
-
+      -->
+      
       <!-- Ng for -->
       
       <div *ngFor = "let current_plan of plans" class="plan">
@@ -248,6 +250,7 @@
     com<br />
     as melhores vozes do mercado!
   </div>
+  <!--
   <details open>
     <summary>Como criar uma conta?</summary>
     <div class="faq__content">
@@ -259,32 +262,10 @@
       </p>
     </div>
   </details>
-  <details>
+  
+  FAQS AQUI -->
+  <details *ngFor="let faq of faqs" >
     <summary>Como criar uma conta?</summary>
-    <div class="faq__content">
-      <p>
-        Se você é assinante mensal do Soar, mas não deseja mais utilizar o plano
-        de assinatura e não sabe como efetuar o cancelamento, é simples. Basta
-        você fazer o login na plataforma acessando: Soar | Entrar . Ao efetuar o
-        login.
-      </p>
-    </div>
-  </details>
-  <details>
-    <summary>Posso usar o serviço antes de criar uma conta?</summary>
-    <div class="faq__content">
-      <p>
-        Se você é assinante mensal do Soar, mas não deseja mais utilizar o plano
-        de assinatura e não sabe como efetuar o cancelamento, é simples. Basta
-        você fazer o login na plataforma acessando: Soar | Entrar . Ao efetuar o
-        login.
-      </p>
-    </div>
-  </details>
-  <details>
-    <summary>
-      Sou Assinante, mas quero Cancelar o plano. Como devo proceder?
-    </summary>
     <div class="faq__content">
       <p>
         Se você é assinante mensal do Soar, mas não deseja mais utilizar o plano

@@ -1,7 +1,9 @@
 <div class="cont-info">
   <div class="title">Meus áudios</div>
-  <div class="item">
-    Áudio - Modelo <img src="./assets/images/icon-menu.png" /><button>
+  
+  
+  <div *ngFor="let myAudio of myAudios" class="item">
+    {{myAudio.title}} <img src="./assets/images/icon-menu.png" /><button>
       Baixar áudio
     </button>
   </div>

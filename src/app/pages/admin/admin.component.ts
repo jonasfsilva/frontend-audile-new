@@ -14,8 +14,11 @@ export class AdminComponent implements OnInit {
   plans = false;
   myAudios = false;
   clickMenu = false;
+  userData : any;
   
-  constructor(private user_service: UserService, private router: Router) {}
+  constructor(private user_service: UserService, private router: Router) {
+    this.getUserData();
+  }
 
   ngOnInit(): void {}
 
@@ -23,6 +26,16 @@ export class AdminComponent implements OnInit {
     console.log('adasds')
     this.user_service.logout();
     this.router.navigate([""]);
+  }
+
+  getUserData(){
+    this.user_service.getUserData().subscribe(
+        (data) => {
+          console.log('data');
+          console.log(data);
+          this.userData = data;
+        },
+      )
   }
 
   async changeTab(selectedTab: string) {

@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   isLogged: boolean;
   contactForm: any;
   plans: any;
+  faqs: any;
 
   constructor(
     private user_service: UserService,
@@ -22,6 +23,7 @@ export class HomeComponent implements OnInit {
   ) {
     this.isLogged = this.user_service.isLogged();
     this.getCommonPlans();
+    this.getFaqs();
   }
   msaapDisplayTitle = false;
   msaapDisplayPlayList = false;
@@ -57,6 +59,23 @@ export class HomeComponent implements OnInit {
         next: (response: any) => {
           console.log(response)
           this.plans = response
+        },
+        error: (err: any) => {
+          console.log(err)
+        },
+        complete() {
+          console.log('fim')
+        },
+      }
+    )
+  }
+
+  getFaqs(){
+    this.settings_service.getFaqs().subscribe(
+      {
+        next: (response: any) => {
+          console.log(response)
+          this.faqs = response
         },
         error: (err: any) => {
           console.log(err)

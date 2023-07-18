@@ -1,12 +1,21 @@
 <div class="cont-info">
   <div class="title">Meus dados</div>
   <div class="cont-form">
-    <label> Nome completo </label>
-    <input placeholder="Digite seu nome completo" />
-    <label> E-mail </label>
-    <input placeholder="Qual seu e-mail?" />
+    <form [formGroup]="userForm" (ngSubmit)="onSubmitUserForm()" >
+      <label> Primeiro Nome </label>
+      <input formControlName="first_name" placeholder="Digite seu nome" />
+      <label> Sobrenome </label>
+      <input formControlName="last_name" placeholder="Digite seu ultimo nome" />
+      <label> E-mail </label>
+      <input formControlName="email" placeholder="Qual seu e-mail?" />
+
+      <div class="buttonDefault">
+        <button>Salvar alterações</button>
+      </div>
+    </form>
   </div>
 
+  <!-- 
   <div class="title">Alterar senha</div>
   <div class="cont-form">
     <label> Senha atual </label>
@@ -19,4 +28,7 @@
       <button>Salvar alterações</button>
     </div>
   </div>
+
+  -->
+
 </div>

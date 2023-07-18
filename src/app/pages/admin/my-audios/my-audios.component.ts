@@ -12,9 +12,26 @@ export class MyAudiosComponent implements OnInit {
   constructor(
     private conversion_service: LibraryService,
   ) {
-    this.myAudios = this.conversion_service.getConversions();
+    this.getMyConversations()
     console.log('this.myAudios')
     console.log(this.myAudios)
+  }
+
+  getMyConversations(): any {
+    this.conversion_service.getConversions()
+    .subscribe(
+      {
+        next: (response: any) => {
+          this.myAudios = response
+        },
+        error: (err: any) => {
+          return err
+        },
+        complete() {
+          console.log('fim')
+        },
+      }
+    )
   }
 
   ngOnInit(): void {}

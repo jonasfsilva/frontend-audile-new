@@ -14,6 +14,16 @@ export class UserService {
 
   constructor(private http : HttpClient, private tokenService: TokenService) { }
 
+  makeHeaders() {
+    let token = this.tokenService.retrieveToken()
+
+    let headers = {
+      "Content-Type": "application/json",
+      "Authorization": `Token ${token}`
+    };
+    return headers
+  }
+
   login(data: any) {
     console.log('pelo servico')
     var base_url =  `${environment.apiUrl}/v1/auth/login/`
@@ -55,6 +65,24 @@ export class UserService {
     return this.tokenService.isLogged();
   }
   
-  updateProfile() {}
+  updateProfile(data:any) {
+    let headers = this.makeHeaders();
+    console.log('enviando');
+    var base_url =  `${environment.apiUrl}/v1/accounts/users/`
+    this.http.patch(`${base_url}`, data, {headers: new HttpHeaders(headers)})
+      .subscribe(
+        (data) => {
+          console.log('enviando user data');
+          console.log(data);
+          this.tokenService.store(data)
+        },
+      )
+  }
+  
+  getUserData() {
+    let headers = this.makeHeaders();
+    var base_url =  `${environment.apiUrl}/v1/accounts/whoami`
+    return this.http.get(`${base_url}`, {headers: new HttpHeaders(headers)})
+  }
 
 }
